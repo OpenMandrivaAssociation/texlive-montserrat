@@ -1,6 +1,6 @@
 Name:		texlive-montserrat
 Version:	54512
-Release:	1
+Release:	2
 Summary:	Montserrat sans serif, otf and pfb, with LaTeX support files
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/montserrat
