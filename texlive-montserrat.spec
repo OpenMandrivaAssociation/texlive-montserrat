@@ -3,7 +3,7 @@ Version:	54512
 Release:	2
 Summary:	Montserrat sans serif, otf and pfb, with LaTeX support files
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/montserrat
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/montserrat
 License:	ofl lppl1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/montserrat.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/montserrat.doc.r%{version}.tar.xz
