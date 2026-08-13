@@ -1,9 +1,10 @@
 %global tl_name montserrat
 %global tl_revision 77682
+%global tl_version 1.03
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	1.03
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	Montserrat sans serif, otf and pfb, with LaTeX support files
 Group:		Publishing
@@ -13,7 +14,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/montserrat.r%{tl
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/montserrat.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 Montserrat is a geometric sans-serif typeface designed by Julieta
@@ -28,3 +30,10 @@ The version having the appellation "Alternates" has letter shapes that
 are much more rounded than the default version, reflecting the signage
 in the neighborhood of Montserrat.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from montserrat:
+Map Montserrat.map
+TL_DROPIN_EOF
